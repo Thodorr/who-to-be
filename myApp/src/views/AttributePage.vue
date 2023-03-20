@@ -35,8 +35,6 @@
           <ion-icon id="fabIcon" :icon="people" ></ion-icon>
         </ion-fab-button>
       </ion-fab>
-
-      <attribute-tabs @tab="changeList" ></attribute-tabs>
     </ion-content>
   </ion-page>
 </template>
@@ -57,7 +55,6 @@ import {
 import {defineComponent} from 'vue';
 import {Attribute, Type} from "@/model/Attribute";
 import AttributeList from "@/components/AttributeList.vue";
-import AttributeTabs from "@/components/AttributeTabs.vue";
 import {add, ellipsisVertical, barbell, people, school} from "ionicons/icons";
 import AddModal from "@/components/Modals/AddModal.vue";
 import TopBar from "@/components/TopBar.vue";
@@ -72,7 +69,6 @@ export default defineComponent({
     PointModal,
     TopBar,
     AddModal,
-    AttributeTabs,
     AttributeList,
     IonContent,
     IonHeader,

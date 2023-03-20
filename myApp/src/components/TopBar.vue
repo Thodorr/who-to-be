@@ -1,16 +1,8 @@
 <template>
-  <ion-header :translucent="true">
-    <ion-toolbar>
+  <ion-header>
+    <ion-toolbar class="header">
 
-      <ion-button @click="$emit('openMenu')" v-if="currentRoute === '/Character'" slot="start" fill="clear" color="medium">
-        <IonIcon :icon="menu"></IonIcon>
-      </ion-button>
-
-      <ion-button router-link="/Character" @click="$emit('backPressed')" v-if="currentRoute === '/Attributes'" slot="start" fill="clear" color="medium">
-        <IonIcon :icon="arrowBack"></IonIcon>
-      </ion-button>
-
-      <ion-title class="ion-no-padding">{{ title }}</ion-title>
+      <ion-title>{{ title }}</ion-title>
       <ion-button v-if="currentRoute === '/Attributes'" @click="$emit('openModal')" slot="end" fill="clear" color="danger">
         {{ attributePoints }}
       </ion-button>
@@ -77,6 +69,9 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  --background: var(--ion-background-color);
+}
 .icon {
   font-size: 30px;
   color: grey;

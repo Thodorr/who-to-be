@@ -80,7 +80,6 @@ import {
   IonRow,
   IonTextarea,
 } from "@ionic/vue";
-import {useCharacterStore} from "@/stores/characters";
 import {bookOutline, brushOutline, peopleOutline, trashOutline} from "ionicons/icons";
 
 export default {
@@ -119,9 +118,7 @@ export default {
     this.currentCharacter = this.currentCharacterInput;
   },
   setup () {
-    const characterStore = useCharacterStore;
     return {
-      characterStore,
       bookOutline,
       brushOutline,
       peopleOutline,
