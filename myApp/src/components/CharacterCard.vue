@@ -1,7 +1,9 @@
 <template>
   <ion-card class="card-body">
-    <div class="portrait">
-      <img alt="Character Portrait" :src="imageUrl"/>
+    <div style="justify-content: center">
+      <div class="portrait">
+        <img alt="Character Portrait" :src="imageUrl"/>
+      </div>
     </div>
     <ion-card-header class="text-area">
       <ion-card-title>{{header}}</ion-card-title>
@@ -36,7 +38,7 @@ export default {
     cutText () {
       let cutText = this.text
       if (cutText.length > 90) {
-        cutText = cutText.slice(0, 90)
+        cutText = cutText.slice(0, 80)
         cutText += '...'
       }
         return cutText
@@ -56,7 +58,7 @@ export default {
   border-radius: 25px;
   width: 100px;
   height: auto;
-  max-height: 95%;
+  max-height: 100px;
   overflow: hidden;
 }
 .text-area {

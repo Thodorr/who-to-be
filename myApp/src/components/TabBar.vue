@@ -38,11 +38,15 @@ export default {
   },
   computed: {
     characterId () {
-      return this.currentRoute.slice(this.currentRoute.length-1, this.currentRoute.length)
+      return this.currentRoute.split('/')[2]
+      //return this.currentRoute.slice(this.currentRoute.length-1, this.currentRoute.length)
     }
   },
   methods: {
     routeStackless (route) {
+      console.log(this.currentRoute)
+      console.log(this.characterId)
+      console.log(route)
       this.router.replace(route)
     }
   },
@@ -82,7 +86,7 @@ export default {
   min-width: 80px;
 }
 .clicked {
-  color: red;
+  color: var(--ion-color-danger);
 }
 .tabText {
   font-size: 12px;

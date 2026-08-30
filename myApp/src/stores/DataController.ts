@@ -2,6 +2,7 @@ import {Storage} from "@ionic/storage";
 import {Character} from "@/model/Character";
 import {Item} from "@/model/Item";
 import {Attribute} from "@/model/Attribute";
+import {Condition} from "@/model/Condition";
 
 export class DataController {
     private store = new Storage();
@@ -64,7 +65,6 @@ export class DataController {
         return characters.length
     }
 
-
     // Attribute Methods
     public async createAttribute(attribute: Attribute) {
         const character: Character = await this.getCurrentCharacter();
@@ -74,43 +74,51 @@ export class DataController {
         return await this.levelUp(attribute, amount);
     }
     public async levelUp(attribute: Attribute, amount: number) {
-        const threshHolds: number[] = [50, 100, 120, 200];
-        let multiplier= 1;
+        const threshHolds: number[] = [70, 100, 120, 200];
+        let multiplier = 1;
+        let removeAmount = 0;
 
         const character: Character = await this.getCurrentCharacter();
         const index = character.attributes.findIndex((attr: any) => attr.name === attribute.name);
-        if (index === -1) character.attributes.push(attribute)
-        else attribute = character.attributes[index]
-        let removeAmount = 0;
+        if (index === -1) character.attributes.push(attribute);
+        else attribute = character.attributes[index];
 
-        for (const i in threshHolds) {
-            if (attribute.value < threshHolds[i]) {
-                const distance = threshHolds[i] - attribute.value;
-
+        for (const threshold of threshHolds) {
+            if (attribute.value < threshold) {
+                const distance = threshold - attribute.value;
                 if (amount <= distance) {
-                    removeAmount += amount * multiplier;
+                    if (attribute.isSmallSkill && attribute.value < 70) {
+                        removeAmount += amount * 0.5; // Small skills cost half until the first threshold
+                    } else {
+                        removeAmount += amount * multiplier;
+                    }
                     attribute.value += amount;
                     break;
                 } else {
-                    amount -= distance
-                    removeAmount += distance * multiplier;
+                    amount -= distance;
+                    if (attribute.isSmallSkill && attribute.value < 70) {
+                        removeAmount += distance * 0.5; // Small skills cost half until the first threshold
+                    } else {
+                        removeAmount += distance * multiplier;
+                    }
                     attribute.value += distance;
                 }
             }
             multiplier++;
         }
-        if (removeAmount > character.attributePoints) {
+
+        if (removeAmount > character.attributePoints - character.usedPoints) {
             attribute.value -= amount;
             return null;
         } else {
-            character.attributePoints -= removeAmount;
             character.usedPoints += removeAmount;
         }
+
         await this.saveCharacter(character);
-        return character
+        return character;
     }
     public async deleteAttribute(attribute: Attribute) {
-        const threshHolds = [200, 120, 100, 50, 0];
+        const threshHolds = [200, 120, 100, 70, 0];
         let multiplier = threshHolds.length;
 
         let amount = attribute.value;
@@ -135,7 +143,6 @@ export class DataController {
 
         const character: Character = await this.getCurrentCharacter();
 
-        character.attributePoints -= regainAmount;
         character.usedPoints += regainAmount;
 
         const index = character.attributes.findIndex((attr: any) => attr.name === attribute.name);
@@ -147,8 +154,16 @@ export class DataController {
     public async changeAttributePoints(amount: number) {
         const character: Character = await this.getCurrentCharacter();
         character.attributePoints = amount;
+        await this.saveCharacter(character);
         return character.attributePoints;
     }
+    public async saveAttributeOrder(attributes: Attribute[]): Promise<Character> {
+        const character = await this.getCurrentCharacter();
+        character.attributes = attributes;
+        await this.saveCharacter(character);
+        return character;
+    }
+
 
     // Item Methods
     public async getItems(): Promise<Item[]> {
@@ -175,4 +190,47 @@ export class DataController {
         await this.saveCharacter(character);
         return character.items as Item[]
     }
+    async createItem(item: Item): Promise<Character | null> {
+        const character = await this.getCurrentCharacter();
+        character.items.push(item);
+        await this.saveCharacter(character);
+        return character;
+    }
+
+    // Delete an item
+    async deleteItem(item: Item): Promise<Character> {
+        const character = await this.getCurrentCharacter();
+        character.items = character.items.filter(i => i.name !== item.name);
+        await this.saveCharacter(character);
+        return character;
+    }
+
+    // Save item order
+    async saveItemOrder(items: Item[]): Promise<Character> {
+        const character = await this.getCurrentCharacter();
+        character.items = items;
+        await this.saveCharacter(character);
+        return character;
+    }
+
+    // Condition Methods
+    public async addCondition(condition: Condition): Promise<Character> {
+        const character = await this.getCurrentCharacter();
+        character.conditions.push(condition);
+        await this.saveCharacter(character);
+        return character
+    }
+
+    public async removeCondition(condition: Condition): Promise<Character> {
+        const character = await this.getCurrentCharacter();
+        const index = character.conditions.findIndex(c => c.name === condition.name && c.type === condition.type);
+        if (index !== -1) {
+            character.conditions.splice(index, 1);
+            await this.saveCharacter(character);
+        }
+        return character
+    }
+
+
+
 }

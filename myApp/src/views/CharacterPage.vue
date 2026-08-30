@@ -125,7 +125,8 @@ export default defineComponent({
     },
     async removeCharacter () {
       await this.dataController.removeCharacter()
-      await this.changeCharacters(0)
+      // await this.changeCharacters(0)
+      this.openMenu()
     },
 
     //UI
@@ -168,5 +169,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 
 </style>

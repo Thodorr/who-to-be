@@ -6,11 +6,13 @@
 </template>
 
 <script lang="ts">
-import {IonApp, IonRouterOutlet} from '@ionic/vue';
+import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { person, man, library, diamond } from "ionicons/icons";
 import TabBar from "@/components/TabBar.vue";
 import router from "@/router";
+import SortPopover from './components/SortPopover.vue';
+import { getCurrentInstance } from 'vue';
 
 export default defineComponent({
   name: 'App',
@@ -20,11 +22,16 @@ export default defineComponent({
     IonRouterOutlet
   },
   computed: {
-    currentRoute () {
+    currentRoute() {
       return router.currentRoute.value.path
     }
   },
   setup() {
+    const app = getCurrentInstance()?.appContext.app;
+    if (app) {
+      app.component('sort-popover', SortPopover);
+    }
+
     return {
       person,
       man,
@@ -36,5 +43,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 </style>

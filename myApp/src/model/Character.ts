@@ -32,12 +32,8 @@ export class Character {
         this.conditions = [];
         this.attributes = [];
         this.items = [];
-        this.attributePoints = 500;
+        this.attributePoints = 400;
         this.usedPoints = 0;
-    }
-
-    public setAttributes(attributes: Array<Attribute>) {
-        this.attributes = attributes
     }
 
 }

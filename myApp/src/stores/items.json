@@ -1,0 +1,499 @@
+[
+  {
+    "name": "Longsword",
+    "value": 0,
+    "type": 0,
+    "icon": "sword",
+    "description": "A well-balanced steel longsword"
+  },
+  {
+    "name": "Dagger",
+    "value": 0,
+    "type": 0,
+    "icon": "plain-dagger",
+    "description": "A small but sharp dagger"
+  },
+  {
+    "name": "Battle Axe",
+    "value": 0,
+    "type": 0,
+    "icon": "axe",
+    "description": "A heavy axe for powerful strikes"
+  },
+  {
+    "name": "Mage's Staff",
+    "value": 0,
+    "type": 0,
+    "icon": "staff",
+    "description": "A staff imbued with mystical energy"
+  },
+  {
+    "name": "Short Bow",
+    "value": 0,
+    "type": 0,
+    "icon": "archer",
+    "description": "A lightweight bow suitable for quick shots"
+  },
+  {
+    "name": "Leather Armor",
+    "value": 0,
+    "type": 1,
+    "icon": "leather-armor",
+    "description": "Basic armor made from hardened leather"
+  },
+  {
+    "name": "Iron Helm",
+    "value": 0,
+    "type": 1,
+    "icon": "helmet",
+    "description": "A sturdy helmet crafted from iron"
+  },
+  {
+    "name": "Chainmail",
+    "value": 0,
+    "type": 1,
+    "icon": "chain-mail",
+    "description": "A flexible armor made from interlocking metal rings"
+  },
+  {
+    "name": "Wizard Robe",
+    "value": 0,
+    "type": 1,
+    "icon": "robe",
+    "description": "A robe adorned with mystical symbols"
+  },
+  {
+    "name": "Adventurer's Boots",
+    "value": 0,
+    "type": 1,
+    "icon": "boots",
+    "description": "Comfortable boots for long journeys"
+  },
+  {
+    "name": "Healing Potion",
+    "value": 0,
+    "type": 3,
+    "icon": "potion",
+    "description": "A potion that restores health"
+  },
+  {
+    "name": "Mana Elixir",
+    "value": 0,
+    "type": 3,
+    "icon": "flask",
+    "description": "A potion that restores magical energy"
+  },
+  {
+    "name": "Herb",
+    "value": 0,
+    "type": 3,
+    "icon": "herbs",
+    "description": "A medicinal herb with various uses"
+  },
+  {
+    "name": "Apple",
+    "value": 0,
+    "type": 3,
+    "icon": "apple",
+    "description": "A fresh, juicy apple"
+  },
+  {
+    "name": "Ration Pack",
+    "value": 0,
+    "type": 3,
+    "icon": "food",
+    "description": "Dried food that can sustain you for a day"
+  },
+  {
+    "name": "Lockpick",
+    "value": 0,
+    "type": 2,
+    "icon": "lockpicks",
+    "description": "A tool used to pick locks"
+  },
+  {
+    "name": "Torch",
+    "value": 0,
+    "type": 2,
+    "icon": "torch",
+    "description": "A torch for lighting dark areas"
+  },
+  {
+    "name": "Rope",
+    "value": 0,
+    "type": 2,
+    "icon": "rope-coil",
+    "description": "A strong rope useful for climbing"
+  },
+  {
+    "name": "Treasure Map",
+    "value": 0,
+    "type": 4,
+    "icon": "scroll-unfurled",
+    "description": "A map leading to hidden treasure"
+  },
+  {
+    "name": "Magic Crystal",
+    "value": 0,
+    "type": 4,
+    "icon": "crystal-wand",
+    "description": "A crystal with mysterious powers"
+  },
+  {
+    "name": "Silver Coin",
+    "value": 0,
+    "type": 4,
+    "icon": "coins",
+    "description": "A shiny silver coin"
+  },
+  {
+    "name": "Ancient Tome",
+    "value": 0,
+    "type": 4,
+    "icon": "book",
+    "description": "A book containing forgotten knowledge"
+  },
+  {
+    "name": "Compass",
+    "value": 0,
+    "type": 2,
+    "icon": "compass",
+    "description": "An instrument to find your way"
+  },
+  {
+    "name": "Dragon Egg",
+    "value": 0,
+    "type": 4,
+    "icon": "dragon-breath",
+    "description": "A rare egg with strange warmth"
+  },
+  {
+    "name": "Laser Pistol",
+    "value": 0,
+    "type": 0,
+    "icon": "ray-gun",
+    "description": "A futuristic pistol that fires concentrated laser beams"
+  },
+  {
+    "name": "Katana",
+    "value": 0,
+    "type": 0,
+    "icon": "katana",
+    "description": "A sharp and elegantly crafted Japanese sword"
+  },
+  {
+    "name": "Fireball Scroll",
+    "value": 0,
+    "type": 4,
+    "icon": "scroll",
+    "description": "A scroll containing the fireball spell"
+  },
+  {
+    "name": "Medieval Gauntlets",
+    "value": 0,
+    "type": 1,
+    "icon": "hand",
+    "description": "Protective gloves made from metal"
+  },
+  {
+    "name": "Energy Shield",
+    "value": 0,
+    "type": 1,
+    "icon": "shield",
+    "description": "A personal energy shield that absorbs attacks"
+  },
+  {
+    "name": "Potion of Speed",
+    "value": 0,
+    "type": 3,
+    "icon": "winged-potion",
+    "description": "A potion that grants enhanced speed temporarily"
+  },
+  {
+    "name": "Mechanic's Wrench",
+    "value": 0,
+    "type": 2,
+    "icon": "wrench",
+    "description": "A sturdy wrench for fixing machinery"
+  },
+  {
+    "name": "Cloak of Invisibility",
+    "value": 0,
+    "type": 1,
+    "icon": "invisible",
+    "description": "A cloak that renders the wearer invisible"
+  },
+  {
+    "name": "Cyber Deck",
+    "value": 0,
+    "type": 2,
+    "icon": "computer",
+    "description": "A hacking device for interfacing with networks"
+  },
+  {
+    "name": "Space Suit",
+    "value": 0,
+    "type": 1,
+    "icon": "suit",
+    "description": "A high-tech suit for surviving in outer space"
+  },
+  {
+    "name": "Mysterious Orb",
+    "value": 0,
+    "type": 4,
+    "icon": "crystal-ball",
+    "description": "An orb that glows with an inner light"
+  },
+  {
+    "name": "First Aid Kit",
+    "value": 0,
+    "type": 3,
+    "icon": "first-aid",
+    "description": "A kit containing basic medical supplies"
+  },
+  {
+    "name": "Antique Compass",
+    "value": 0,
+    "type": 2,
+    "icon": "compass",
+    "description": "An old compass that points to the North"
+  },
+  {
+    "name": "Gas Mask",
+    "value": 0,
+    "type": 1,
+    "icon": "gas-mask",
+    "description": "Protects against harmful gases"
+  },
+  {
+    "name": "Grenade",
+    "value": 0,
+    "type": 3,
+    "icon": "explosion",
+    "description": "A small explosive device"
+  },
+  {
+    "name": "Iron Key",
+    "value": 0,
+    "type": 4,
+    "icon": "key",
+    "description": "An iron key for an unknown lock"
+  },
+  {
+    "name": "Ancient Amulet",
+    "value": 0,
+    "type": 4,
+    "icon": "amulet",
+    "description": "An amulet believed to ward off evil"
+  },
+  {
+    "name": "Steampunk Goggles",
+    "value": 0,
+    "type": 1,
+    "icon": "goggles",
+    "description": "Stylish goggles with a steampunk flair"
+  },
+  {
+    "name": "Tome of Knowledge",
+    "value": 0,
+    "type": 4,
+    "icon": "book",
+    "description": "A book filled with arcane knowledge"
+  },
+  {
+    "name": "Biohazard Suit",
+    "value": 0,
+    "type": 1,
+    "icon": "biohazard",
+    "description": "A suit protecting from biological hazards"
+  },
+  {
+    "name": "Jetpack",
+    "value": 0,
+    "type": 2,
+    "icon": "jetpack",
+    "description": "A personal flying device"
+  },
+  {
+    "name": "Rations",
+    "value": 0,
+    "type": 3,
+    "icon": "campfire",
+    "description": "Food rations for survival"
+  },
+  {
+    "name": "Crystal Shard",
+    "value": 0,
+    "type": 4,
+    "icon": "crystal-shard",
+    "description": "A piece of a larger magical crystal"
+  },
+  {
+    "name": "Robot Companion",
+    "value": 0,
+    "type": 2,
+    "icon": "robot",
+    "description": "A small robotic helper"
+  },
+  {
+    "name": "Magic Ring",
+    "value": 0,
+    "type": 4,
+    "icon": "ring",
+    "description": "A ring that grants minor magical abilities"
+  },
+  {
+    "name": "Hunter's Bow",
+    "value": 0,
+    "type": 0,
+    "icon": "bow",
+    "description": "A well-crafted bow for hunting"
+  },
+  {
+    "name": "Map of the Stars",
+    "value": 0,
+    "type": 4,
+    "icon": "constellation",
+    "description": "A detailed map of the night sky"
+  },
+  {
+    "name": "Alchemist's Potion",
+    "value": 0,
+    "type": 3,
+    "icon": "vial",
+    "description": "A potion with unpredictable effects"
+  },
+  {
+    "name": "Survival Knife",
+    "value": 0,
+    "type": 0,
+    "icon": "knife",
+    "description": "A versatile knife for wilderness survival"
+  },
+  {
+    "name": "Data Chip",
+    "value": 0,
+    "type": 4,
+    "icon": "usb",
+    "description": "A chip containing encrypted data"
+  },
+  {
+    "name": "Ceremonial Dagger",
+    "value": 0,
+    "type": 0,
+    "icon": "ceremonial-dagger",
+    "description": "A dagger used in ancient rituals"
+  },
+  {
+    "name": "Plasma Rifle",
+    "value": 0,
+    "type": 0,
+    "icon": "plasma-gun",
+    "description": "A rifle that fires high-energy plasma"
+  },
+  {
+    "name": "Sacred Relic",
+    "value": 0,
+    "type": 4,
+    "icon": "holy-symbol",
+    "description": "A relic with divine power"
+  },
+  {
+    "name": "Military Vest",
+    "value": 0,
+    "type": 1,
+    "icon": "bulletproof-vest",
+    "description": "A vest offering protection in combat"
+  },
+  {
+    "name": "Chemical Vial",
+    "value": 0,
+    "type": 3,
+    "icon": "chemical-bolt",
+    "description": "A vial containing a mysterious chemical"
+  },
+  {
+    "name": "Ancient Coin",
+    "value": 0,
+    "type": 4,
+    "icon": "coins",
+    "description": "An old coin from a lost civilization"
+  },
+  {
+    "name": "Nano Bandages",
+    "value": 0,
+    "type": 3,
+    "icon": "bandage-roll",
+    "description": "High-tech bandages that heal wounds quickly"
+  },
+  {
+    "name": "Digital Watch",
+    "value": 0,
+    "type": 4,
+    "icon": "wristwatch",
+    "description": "A watch with multiple digital features"
+  },
+  {
+    "name": "Radioactive Ore",
+    "value": 0,
+    "type": 4,
+    "icon": "nuclear",
+    "description": "A chunk of radioactive material"
+  },
+  {
+    "name": "Emergency Flare",
+    "value": 0,
+    "type": 3,
+    "icon": "flare",
+    "description": "A flare for signaling help"
+  },
+  {
+    "name": "Portable Scanner",
+    "value": 0,
+    "type": 2,
+    "icon": "radar",
+    "description": "A scanner for analyzing surroundings"
+  },
+  {
+    "name": "Parachute",
+    "value": 0,
+    "type": 2,
+    "icon": "parachute",
+    "description": "A device for safe descent from high altitudes"
+  },
+  {
+    "name": "Pirate's Cutlass",
+    "value": 0,
+    "type": 0,
+    "icon": "cutlass",
+    "description": "A curved blade used by seafaring pirates"
+  },
+  {
+    "name": "Pocket Watch",
+    "value": 0,
+    "type": 4,
+    "icon": "clock",
+    "description": "A stylish pocket watch from a bygone era"
+  },
+  {
+    "name": "Night Vision Goggles",
+    "value": 0,
+    "type": 1,
+    "icon": "night-vision",
+    "description": "Goggles that allow sight in low light"
+  },
+  {
+    "name": "Throwing Knives",
+    "value": 0,
+    "type": 0,
+    "icon": "throwing-knives",
+    "description": "Balanced knives for throwing"
+  },
+  {
+    "name": "Teleporter Device",
+    "value": 0,
+    "type": 2,
+    "icon": "teleporter",
+    "description": "A device for instant travel between locations"
+  }
+]

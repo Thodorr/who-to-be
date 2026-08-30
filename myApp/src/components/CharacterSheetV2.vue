@@ -215,6 +215,7 @@ export default {
     padding-top: 5px;
     z-index: 2;
     background-color: white;
+
   }
 }
 
